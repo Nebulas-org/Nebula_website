@@ -33,17 +33,24 @@
 ![](https://i.imgur.com/cX2ZAjw.jpg)
 ![](https://i.imgur.com/OK0oqLP.jpg)
 
-#### 登陆调试注意
+登陆调试注意：
 后台登陆地址是:localhost:8080
 后台的账号密码为--->**账号:18008085420	密码:123456**
 登陆成功后，使用swagger调试后台接口
 swagger地址：localhost:8080/swagger-ui.html
-###数据表的id注意事项
+
+
+数据表的id注意事项：
 默认不传id，使用idwork默认生成19位Long类型id
-###redis，mysql配置说明
+
+
+redis，mysql配置说明:
 详见application-dev.properties
 
 
-### 问题建议
+首页大致框架图参考：
+Nebula_website\src\main\resources\static\images\首页框架图.jpg
+
+问题建议:
 - 内部联系
 - 联系我的邮箱：280550256@qq.com

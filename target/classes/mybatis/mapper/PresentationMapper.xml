@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.gsac.nubles.dao.PresentationMapper">
-  <resultMap id="BaseResultMap" type="com.gsac.nubles.model.Presentation">
+<mapper namespace="com.gsac.nebulas.dao.PresentationMapper">
+  <resultMap id="BaseResultMap" type="com.gsac.nebulas.model.Presentation">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="title" jdbcType="VARCHAR" property="title" />
     <result column="trademark" jdbcType="VARCHAR" property="trademark" />
@@ -17,7 +17,7 @@
     <result column="status" jdbcType="TINYINT" property="status" />
     <result column="crateDate" jdbcType="TIMESTAMP" property="cratedate" />
   </resultMap>
-  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.gsac.nubles.model.Presentation">
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.gsac.nebulas.model.Presentation">
     <result column="brief" jdbcType="LONGVARCHAR" property="brief" />
   </resultMap>
   <sql id="Example_Where_Clause">
@@ -86,7 +86,7 @@
   <sql id="Blob_Column_List">
     brief
   </sql>
-  <select id="selectByExampleWithBLOBs" parameterType="com.gsac.nubles.model.PresentationExample" resultMap="ResultMapWithBLOBs">
+  <select id="selectByExampleWithBLOBs" parameterType="com.gsac.nebulas.model.PresentationExample" resultMap="ResultMapWithBLOBs">
     select
     <if test="distinct">
       distinct
@@ -102,7 +102,7 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByExample" parameterType="com.gsac.nubles.model.PresentationExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.gsac.nebulas.model.PresentationExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -136,13 +136,13 @@
     delete from presentation
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.gsac.nubles.model.PresentationExample">
+  <delete id="deleteByExample" parameterType="com.gsac.nebulas.model.PresentationExample">
     delete from presentation
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.gsac.nubles.model.Presentation">
+  <insert id="insert" parameterType="com.gsac.nebulas.model.Presentation">
     insert into presentation (id, title, trademark, 
       marketing, trademark_small_label_1, trademark_small_label_2, 
       trademark_small_label_3, trademark_small_label_4, 
@@ -158,7 +158,7 @@
       #{status,jdbcType=TINYINT}, #{cratedate,jdbcType=TIMESTAMP}, #{brief,jdbcType=LONGVARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.gsac.nubles.model.Presentation">
+  <insert id="insertSelective" parameterType="com.gsac.nebulas.model.Presentation">
     insert into presentation
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -255,7 +255,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.gsac.nubles.model.PresentationExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.gsac.nebulas.model.PresentationExample" resultType="java.lang.Long">
     select count(*) from presentation
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -355,7 +355,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.gsac.nubles.model.Presentation">
+  <update id="updateByPrimaryKeySelective" parameterType="com.gsac.nebulas.model.Presentation">
     update presentation
     <set>
       <if test="title != null">
@@ -403,7 +403,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.gsac.nubles.model.Presentation">
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.gsac.nebulas.model.Presentation">
     update presentation
     set title = #{title,jdbcType=VARCHAR},
       trademark = #{trademark,jdbcType=VARCHAR},
@@ -421,7 +421,7 @@
       brief = #{brief,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.gsac.nubles.model.Presentation">
+  <update id="updateByPrimaryKey" parameterType="com.gsac.nebulas.model.Presentation">
     update presentation
     set title = #{title,jdbcType=VARCHAR},
       trademark = #{trademark,jdbcType=VARCHAR},
