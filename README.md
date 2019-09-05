@@ -1,10 +1,10 @@
 # nebulas
-一个简洁的官网
+拾星云科技公司官网
 
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu) [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 
 #### 项目介绍
-一个简洁的公司官网主页,使用spring boot作为后台框架.
+拾星云公司官网主页,使用spring boot作为后台框架.
 
 #### 软件架构
 - 后台框架:Spring Boot 2.0.3.RELEASE
@@ -33,11 +33,17 @@
 ![](https://i.imgur.com/cX2ZAjw.jpg)
 ![](https://i.imgur.com/OK0oqLP.jpg)
 
-#### 注意
-截图看上去很丑,还是pull下来看下一吧,其实长得还可以.
+#### 登陆调试注意
+后台登陆地址是:localhost:8080
+后台的账号密码为--->**账号:18008085420	密码:123456**
+登陆成功后，使用swagger调试后台接口
+swagger地址：localhost:8080/swagger-ui.html
+###数据表的id注意事项
+默认不传id，使用idwork默认生成19位Long类型id
+###redis，mysql配置说明
+详见application-dev.properties
 
-对了,后台的账号密码为--->**账号:18008085420	密码:123456**
 
 ### 问题建议
-
+- 内部联系
 - 联系我的邮箱：280550256@qq.com
